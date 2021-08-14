@@ -1,4 +1,0 @@
--------------------------------------------------------------------------------
-Test set: com.mybox.ms1.MS1AppTest
--------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.068 s - in com.mybox.ms1.MS1AppTest
