@@ -1,6 +1,8 @@
 # target folder
 target/
 
+# misc file
+.DS_Store
 # Compiled class file
 *.class
 
