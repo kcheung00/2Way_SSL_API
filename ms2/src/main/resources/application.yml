@@ -1,6 +1,6 @@
 spring:
   application:
-    name: my_api_gateway
+    name: ms2
 ---
 server:
   port: 9033
