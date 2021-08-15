@@ -1,17 +1,17 @@
 spring:
   application:
-    name: nt-ms
+    name: my_api_gateway
 ---
 server:
-  port: 9002
+  port: 9033
   ssl:
     enabled: true
     client-auth: need
-    key-store: classpath:nt-ms.jks
-    key-store-password: nt-service
-    key-alias: nt-ms
+    key-store: classpath:my_api_gateway.jks
+    key-store-password: my_api_gateway
+    key-alias: my_api_gateway
     key-store-type: JKS
     key-store-provider: SUN
-    trust-store: classpath:nt-ms.jks
-    trust-store-password: nt-service
+    trust-store: classpath:my_api_gateway.jks
+    trust-store-password: my_api_gateway
     trust-store-type: JKS
