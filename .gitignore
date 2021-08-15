@@ -3,6 +3,10 @@ target/
 
 # misc file
 .DS_Store
+.classpath
+.project
+.settings
+  
 # Compiled class file
 *.class
 
