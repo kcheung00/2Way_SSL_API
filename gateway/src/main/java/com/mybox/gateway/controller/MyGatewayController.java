@@ -25,11 +25,25 @@ public class MyGatewayController {
 	}
 	
 	@RequestMapping(value = "/ms1data", method = RequestMethod.GET)
-	public String getMsData() {
-		System.out.println("Got inside GATEWAY - ms1data method");
+	public String getMs1Data() {
+		System.out.println("Got data through GATEWAY - ms1data method");
 		try {
 			String msEndpoint = env.getProperty("endpoint.ms1-service");
 			System.out.println("MS 1 Endpoint name : [" + msEndpoint + "]");
+			
+			return restTemplate.getForObject(new URI(msEndpoint), String.class);
+		} catch (Exception ex) {
+			ex.printStackTrace();
+		}
+		return "Exception occurred.. so, returning default data";
+	}
+
+	@RequestMapping(value = "/ms2data", method = RequestMethod.GET)
+	public String getMs2Data() {
+		System.out.println("Got data through GATEWAY - ms1data method");
+		try {
+			String msEndpoint = env.getProperty("endpoint.ms2-service");
+			System.out.println("MS 2 Endpoint name : [" + msEndpoint + "]");
 			
 			return restTemplate.getForObject(new URI(msEndpoint), String.class);
 		} catch (Exception ex) {
