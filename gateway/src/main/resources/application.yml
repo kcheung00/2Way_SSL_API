@@ -19,3 +19,5 @@ server:
 endpoint:
   ms1-service: https://localhost:9022/ms1/data
   ms2-service: https://localhost:9033/ms2/data
+  ms2-greeting: https://localhost:9033/ms2/greeting
+  ms2-sendmsg: https://localhost:9033/ms2/sendmsg
