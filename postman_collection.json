@@ -1,0 +1,163 @@
+{
+	"info": {
+		"_postman_id": "2cd3a7ae-9b1c-4d6a-a3a2-1240c361d777",
+		"name": "2Way_SSL_Demo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET_Gateway_Data",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:9011/my_gateway/data",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "9011",
+					"path": [
+						"my_gateway",
+						"data"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET_MS2_Data",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:9011/my_gateway/ms2data",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "9011",
+					"path": [
+						"my_gateway",
+						"ms2data"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET_MS2_Greeting",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:9011/my_gateway/greeting?name=r4r4r4rr4",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "9011",
+					"path": [
+						"my_gateway",
+						"greeting"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "r4r4r4rr4"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET_MS_Data_By_Gateway",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:9011/my_gateway/ms1data",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "9011",
+					"path": [
+						"my_gateway",
+						"ms1data"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET_MS_Data",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:9011/my_gateway/ms1data",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "9011",
+					"path": [
+						"my_gateway",
+						"ms1data"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST_MS2_Msg",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "Test Message"
+				},
+				"url": {
+					"raw": "https://localhost:9011/my_gateway/ms2sendmsg",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "9011",
+					"path": [
+						"my_gateway",
+						"ms2sendmsg"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST_Gateway_Msg",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "Test Message for gateway"
+				},
+				"url": {
+					"raw": "https://localhost:9011/my_gateway/gw_post_msg",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "9011",
+					"path": [
+						"my_gateway",
+						"gw_post_msg"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
