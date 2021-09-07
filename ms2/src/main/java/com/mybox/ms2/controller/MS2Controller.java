@@ -1,7 +1,14 @@
 package com.mybox.ms2.controller;
 
 import com.mybox.ms2.services.Greeting;
+import com.mybox.ms2.services.Producer;
+
 import java.util.concurrent.atomic.AtomicLong;
+import java.util.concurrent.ExecutionException;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,6 +23,8 @@ public class MS2Controller {
 
 	private static final String template = "Hello, %s!";
 	private final AtomicLong counter = new AtomicLong();
+	private final Logger logger = LoggerFactory.getLogger(MS2Controller.class);
+    private Producer producer;
 
 	@GetMapping("/greeting")
 	public Greeting greeting(@RequestParam(value = "name", defaultValue = "World") String name) {
@@ -30,9 +39,8 @@ public class MS2Controller {
 
 	@RequestMapping(method = RequestMethod.POST, value="/sendmsg")
 	@ResponseBody
-	public String sendMsg(@RequestBody String msg) {
+	public String sendMsg(@RequestBody String msg) throws ExecutionException, InterruptedException{
 		System.out.println("Publish message to kafka - " + msg);
-	
         return msg;
 	}
 }//end of class MS2Controller
