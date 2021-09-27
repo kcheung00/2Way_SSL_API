@@ -63,3 +63,9 @@ curl --cert my_api_services.crt --key my_api_services.key --location --request P
 
 curl --cert my_api_services.crt --key my_api_services.key --location --request POST 'https://localhost:9011/my_gateway/gw_post_msg' --header 'Content-Type: text/plain' --data-raw 'Test Message for gateway'
 ```
+
+Quick Note:
+Gateway - 9011 (80:9011)
+MS1 - 9022 (9011:9022)
+MS2 - 9033 (9011:9033)
+-p 8080:80 (80 is inside container, 8080 is inside docker host)
