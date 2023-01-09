@@ -53,14 +53,21 @@ Certificates were created and imported to corresponding components. Detail refer
 Browser Test
 ```
 https://localhost:9011/my_gateway/ms1data
+```
+```
 https://localhost:9011/my_gateway/ms2data
+```
+```
 https://localhost:9011/my_gateway/greeting
+```
+```
 https://localhost:9011/my_gateway/data
 ```
 CURL Test (Refer to postman_collection.json)
 ```sh
 curl --cert my_api_services.crt --key my_api_services.key --location --request POST 'https://localhost:9011/my_gateway/ms2sendmsg' --header 'Content-Type: text/plain' --data-raw 'Test Message through gateway to MS 2 method'
-
+```
+```sh
 curl --cert my_api_services.crt --key my_api_services.key --location --request POST 'https://localhost:9011/my_gateway/gw_post_msg' --header 'Content-Type: text/plain' --data-raw 'Test Message for gateway'
 ```
 
